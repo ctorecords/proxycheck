@@ -1,0 +1,13 @@
+#!/usr/bin/env perl
+
+use Ubic::Service::SimpleDaemon;
+
+return Ubic::Service::SimpleDaemon->new({
+  bin         => './script/check_proxy minion worker -m production -j 4',
+  user        => 'site',
+  cwd         => '/home/site/autobanner/check_proxy/',
+  ubic_log    => '/home/site/var/log/check_proxy-ubic.log',
+  stdout      => '/home/site/var/log/check_proxy-error.log',
+  stderr      => '/home/site/var/log/check_proxy-error.log',
+  env         => {}
+});

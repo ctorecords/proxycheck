@@ -1,0 +1,14 @@
+{
+  hypnotoad => {
+    listen => ['http://0.0.0.0:3000'],
+    workers => 1,
+    user => 'logioniz'
+  },
+  pg => {
+    uri => 'postgresql://bnrs:eiwe4Zichi@db.bnrs.org/bnrs?PrintError=1&RaiseError=0&AutoCommit=1&pg_enable_utf8=1'
+  },
+  site => {
+    address => '94.190.11.177',
+    domain  => '94.190.11.177'
+  }
+}

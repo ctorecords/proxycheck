@@ -1,0 +1,14 @@
+#!/usr/bin/env perl
+
+use Ubic::Service::Hypnotoad;
+
+return Ubic::Service::Hypnotoad->new({
+  bin   => '/usr/local/bin/hypnotoad',
+  app   => '/home/site/autobanner/check_proxy/script/check_proxy',
+  cwd   => '/home/site/autobanner/check_proxy',
+  env   => {},
+  wait_status => {
+    step    => 0.1,
+    trials  => 30
+  }
+});
